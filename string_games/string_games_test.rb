@@ -24,4 +24,11 @@ class StringGamesTest < Minitest::Test
     refute sg.palindrome?(word)
   end
 
+  def test_longer_words
+    sg = StringGames.new
+
+    assert sg.palindrome?('kayak')
+    refute sg.palindrome?('margaret')
+  end
+
 end
