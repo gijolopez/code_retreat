@@ -1,28 +1,17 @@
+require 'pry'
 class StringGames
 
   def palindrome?(word)
-    word == word.reverse
+    letters = word.chars
+    backwards = reverse_letters(letters)
+    backwards == letters
+  end
 
+  def reverse_letters(letters)
+    backwards = letters.each_with_index do |letter, index|
+      letters[index * -1]
+      binding.pry
+    end
+    backwards
   end
 end
-=begin
-anna
-Civic
-Kayak
-Level
-Madam
-Mom
-Noon
-Racecar
-Radar
-Redder
-Refer
-Repaper
-Rotator
-Rotor
-Sagas
-Solos
-Stats
-Tenet
-Wow
-=end

@@ -24,4 +24,18 @@ class StringGamesTest < Minitest::Test
     refute sg.palindrome?(word)
   end
 
+  def test_if_palindorome_longer_word
+    sg = StringGames.new
+    word = "level"
+
+    assert sg.palindrome?(word)
+  end
+
+  def test_if_palindorome_longer_word
+    sg = StringGames.new
+    word = "going"
+
+    refute sg.palindrome?(word)
+  end
+
 end
